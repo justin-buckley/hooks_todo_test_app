@@ -1,29 +1,29 @@
 const dummyDB = {
-  'May 10, 2019': [
+  'June 19, 2019': [
     { id: 1, text: "Some things to do!", isDone: false },
     { id: 2, text: "More!", isDone: true },
   ],
-  'May 12, 2019': [
+  'June 21, 2019': [
     { id: 3, text: "Only one thing today", isDone: true },
   ],
-  'May 13, 2019': [
+  'June 22, 2019': [
     { id: 4, text: "A task", isDone: false },
     { id: 5, text: "Another task", isDone: true },
     { id: 6, text: "Yet another task", isDone: true }
   ],
-  'May 14, 2019': [
+  'June 23, 2019': [
     { id: 7, text: "Something to do", isDone: false },
     { id: 8, text: "Finish this", isDone: true },
     { id: 9, text: "Finish that", isDone: false },
   ],
-  'May 15, 2019': [
+  'June 24, 2019': [
     { id: 9, text: "More stuff to do", isDone: false },
     { id: 10, text: "Exercise!", isDone: false },
     { id: 11, text: "Clean up!", isDone: false },
     { id: 12, text: "Get your life in order!", isDone: false },
     { id: 13, text: "Get a life!", isDone: false },
   ],
-  'May 16, 2019': [
+  'June 25, 2019': [
     { id: 14, text: "Stuff", isDone: false },
     { id: 15, text: "Exercise again!", isDone: false },
   ],
