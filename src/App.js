@@ -40,16 +40,11 @@ function dateFormatter(date) {
 function App() {
   const [currentDate, setCurrentDate] = useState(new Date())
   const [formattedDate, setFormattedDate] = useState(dateFormatter(currentDate))
-  // const formattedDate = useRef(dateFormatter(currentDate))
-  
-  // useEffect(() => {
-  //   formattedDate.current = dateFormatter(currentDate)
-  //   console.log("from effect: ", formattedDate.current)
-  //   console.log("currentDate.getDate ", currentDate.getDate())
-  // }, [currentDate])
+  const [ todaysTodos, setTodaysTodos ] = useState( dummyDB[formattedDate] )
 
   useEffect(() => {
     setFormattedDate(dateFormatter(currentDate))
+    setTodaysTodos(dummyDB[formattedDate])
   }, [currentDate, formattedDate])
 
   function goToTomorrow() {
@@ -66,7 +61,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider value={{ goToTomorrow, goToYesterday, formattedDate, dummyDB }}>
+      <AppContext.Provider value={{ goToTomorrow, goToYesterday, formattedDate, todaysTodos, setTodaysTodos }}>
         <Header />
         <Container>
           <YesterdayButton />
