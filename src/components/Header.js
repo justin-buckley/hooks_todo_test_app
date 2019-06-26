@@ -5,5 +5,5 @@ export default function Header() {
     <header className="App-header">
       <h1>To do today</h1>
     </header>
-  )
+  );
 }

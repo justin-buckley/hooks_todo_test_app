@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 
-export default function DayChooserButton({classAndText, clickHandler}) {
-
+export default function DayChooserButton({ classAndText, clickHandler }) {
   function handleClick(event) {
-    event.preventDefault()
-    clickHandler()
+    event.preventDefault();
+    clickHandler();
   }
 
   return (
-    <div className={classAndText}><a href="#" onClick={handleClick}>{classAndText}</a></div>
-  )
+    <div className={classAndText}>
+      <a href="#" onClick={handleClick}>
+        {classAndText}
+      </a>
+    </div>
+  );
 }
