@@ -7,7 +7,7 @@ import YesterdayButton from './components/YesterdayButton'
 import TomorrowButton from './components/TomorrowButton'
 import List from './components/List'
 
-import dummyDB from './dummyDB'
+import dummyDB, { getEntryForDate } from './dummyDB'
 
 export const AppContext = createContext()
 
@@ -40,11 +40,11 @@ function dateFormatter(date) {
 function App() {
   const [currentDate, setCurrentDate] = useState(new Date())
   const [formattedDate, setFormattedDate] = useState(dateFormatter(currentDate))
-  const [ todaysTodos, setTodaysTodos ] = useState( dummyDB[formattedDate] )
+  const [todaysTodos, setTodaysTodos] = useState(dummyDB[formattedDate])
 
   useEffect(() => {
     setFormattedDate(dateFormatter(currentDate))
-    setTodaysTodos(dummyDB[formattedDate])
+    setTodaysTodos(getEntryForDate(formattedDate))
   }, [currentDate, formattedDate])
 
   function goToTomorrow() {
